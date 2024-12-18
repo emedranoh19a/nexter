@@ -43,9 +43,5 @@ body {
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     ) [center-end] minmax(6rem, 1fr) [full-end];
-  //TODO: delete this
-  & > * {
-    padding: 40px;
-    font-size: 3rem;
-  }
+
 }
