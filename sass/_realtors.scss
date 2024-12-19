@@ -1,6 +1,41 @@
-.realtors{
-    background-color: $color-secondary;
-    grid-column: col-start 7/ full-end;
-}
+.realtors {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
 
+display: grid;
+align-content: center;
+justify-content:center;
+justify-items:center; //does nothing to the element that defines the grid width.
+grid-row-gap:2rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center;
+  }
+
+  &__img {
+    width: 7rem;
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__details {
+  }
+  &__sold {
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+    margin-top: -3px;
+  }
+}
+//Things I learned in this lesson.
 //When we have two lines together (like a catchy phrase), both of them might be better to style with a line height of 1
+
+//    grid-template-columns: min-content max-content;
+//Above, the min content respects the size of the content. Max content expands the maximum content, useful for text.
+
+//Technique for the vertical space, according to the viewport width.
+//    grid-row-gap: 5vh;
