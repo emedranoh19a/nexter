@@ -1,4 +1,70 @@
-.header{
-    background-color: $color-grey-dark-1;
-    grid-column: full-start/col-end 6;
+.header {
+  background-color: $color-grey-dark-1;
+  grid-column: full-start/col-end 6;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.93),
+      rgba($color-secondary, 0.93)
+    ),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  justify-content: center;
+
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+  &__btn {
+    align-self: start;
+    justify-self: start;
+  }
+  &__seenon-text {
+    font-size: 1.6rem;
+    color: $color-grey-light-1;
+    display: grid; //text, and pseudos.
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap:1.5rem;
+    filter: brightness(70%);
+    &::before,
+    &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: currentColor;
+        filter: brightness(70%);
+
+    }
+  }
+
+  &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-items: center;
+    img {
+      height: 2.5rem;
+      filter: brightness(70%);
+    }
+  }
 }
+
+//Things to learn
+
+//How to manage vertical spacing in a responsive layout using CSS Grid techniques;
+
+//How to use ::before and ::after as grid items.
+
+//The following line is for letting the title occupy the space without breaking.
+//grid-template-columns: max-content;
+
+//The image gets "darker" with brightness filter. It is not the same as opacity!
+//IMPORTANT. Even Text can be a grid item. And also, pseudo-elements!
